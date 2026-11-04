@@ -6,7 +6,6 @@
 # however, python is much better at doing very large scare data sets while excel can only do a little.
 
 
-
 print("--- Exercise 1 ---")
 customer = {
     "name": "Alice",
