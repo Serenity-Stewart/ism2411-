@@ -1,3 +1,12 @@
+# 1.) I believe the general rule of thumb is whether you are certain or uncertain
+# of data. you use brackets for when you know the key exists - being very structured data.
+# meanwhile, use .get() if you're unsure if theres a key/if the data is entirely uncertain.
+
+# 2.) while I never used excel, I'm aware of the similarities when it comes to rows and colums of informaton.
+# however, python is much better at doing very large scare data sets while excel can only do a little.
+
+
+
 print("--- Exercise 1 ---")
 customer = {
     "name": "Alice",
