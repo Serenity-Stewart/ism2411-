@@ -21,3 +21,4 @@ with open(SALES_FILE, "r") as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
+
