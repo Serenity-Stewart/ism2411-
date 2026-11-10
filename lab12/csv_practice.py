@@ -1,5 +1,12 @@
+# 1.) It makes tasks much more simple in comparision to excel. This is because it's more efficient
+# and holds a much larger scale of data than excel can hold. However, excel is much more manual and hands on. 
+# 2.) I believe something thst can record customer transactions. This is because we can use this to count just how
+# much of something we still have in stock for other consumers.
+#
+
 import csv
-from datetime import datatime
+import datetime
+from datetime import datetime
 
 SALES_FILE = "data/sales.csv"
 CLEANED_FILE = "data/cleaned.csv"
@@ -65,8 +72,14 @@ with open(SALES_FILE, "r") as f:
             high_value.append([product, f"{price:.2f}", quantity, f"total:.2f"])
 
 with open(CLEANED_FILE, "w", newline="") as f:
-    writer
-    
+    writer = csv.writer(f)
+    writer.writerow(["Product", "Price", "Qty", "Total"])
+    writer.writerows(high_value)
+
+print(f"Original rows: {rows_read}")
+print(f"Rows written: {len(high_value)}")
+
+
 # come back to
 
 print("--- Exercise 6 ---")
@@ -92,3 +105,17 @@ with open(SALES_FILE, "r") as f:
         summary[product] = summary.get(product, 0) + total
 for product in sorted(summary):
     print(f"{product}: ${summary[product]:.2f}")
+
+print("--- Exercise 8 ---")
+
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%m:%S")
+with open(LOG_FILE, "a") as f:
+    f.write(f"{timestamp} total revenue: ${total_revenue:.2f}\n")
+
+entries = 0
+with open(LOG_FILE, "r") as f:
+    for line in f:
+        enteries+= 1
+        print(line.strip())
+
+print(f"Log enteries so far: {enteries}")
