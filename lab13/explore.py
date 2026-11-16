@@ -1,5 +1,12 @@
-
-
+#
+#
+#
+#
+#
+#
+#
+#
+#
 print("---exercise 1---")
 
 import pandas as pd; df =
@@ -18,7 +25,8 @@ print(south.head())
 
 print("---exercise 3---")
 
-df.sort_values('revenue', ascending=False).head(5)
+df.sort_values('revenue', 
+               ascending=False).head(5)
 print(df.sort_values)
 
 print("---exercise 4---")
@@ -45,3 +53,6 @@ df_subset = df[['region', 'product', 'revenue']]
 print(df_subset.shape)
 
 print("---exercise 8---")
+
+df.to_csv('data/explored.csv',
+          index=False)
