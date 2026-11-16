@@ -1,4 +1,9 @@
+
+
+print("---exercise 1---")
+
 import pandas as pd; df =
+
 pd.read_csv('data/retail_sales.csv')
 print(df.head())
 print(df.shape)
@@ -36,6 +41,7 @@ print(df['region'].value_counts())
 
 print("---exercise 7---")
 
-
+df_subset = df[['region', 'product', 'revenue']]
+print(df_subset.shape)
 
 print("---exercise 8---")
