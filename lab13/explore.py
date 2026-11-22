@@ -1,12 +1,9 @@
+# 1.) a boolean filter evaluates a condition (true/false) for every row, and discards the falses
+# 2.) single brackets return a flat 1D series. double brackets return a structured 2D DataFrame.
+# 3.) Reproducible code, identical results, zero hidden formula errors, handles millions of rows. 
 #
 #
-#
-#
-#
-#
-#
-#
-#
+
 print("---exercise 1---")
 
 import pandas as pd; df =
